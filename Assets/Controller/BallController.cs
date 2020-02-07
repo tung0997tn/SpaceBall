@@ -8,11 +8,27 @@ public class BallController : MonoBehaviour
     [SerializeField] private float MaxSpeed;
     [SerializeField] private float BallRotation;
     [SerializeField] private GameObject cube;
+    [SerializeField] private GameObject Ball;
+    [SerializeField] private Material material1;
+    [SerializeField] private Material material2;
+
+    public int MaterialNumber;
     private Rigidbody rgBody;
     // Start is called before the first frame update
     void Start()
     {
         rgBody = GetComponent<Rigidbody>();
+        PlayerData data = SaveSystem.LoadPlayer();
+        MaterialNumber = data.materialNumber;
+        if (MaterialNumber == 1)
+        {
+            Ball.GetComponent<Renderer>().material = material1;
+        }
+        if (MaterialNumber == 2)
+        {
+            Ball.GetComponent<Renderer>().material = material2;
+        }
+        
     }
 
     // Update is called once per frame

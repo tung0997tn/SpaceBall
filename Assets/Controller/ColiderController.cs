@@ -6,7 +6,7 @@ public class ColiderController : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Wall")
+        if(GameController.instant.isGameDone == false && other.tag == "Wall")
         {
             GameController.instant.isGameDone = true;
             GameController.instant.GameOver();

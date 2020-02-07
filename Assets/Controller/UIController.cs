@@ -18,6 +18,8 @@ public class UIController : MonoBehaviour
     [SerializeField] private GameObject WinnerUI;
     [Header("Pause")]
     [SerializeField] private GameObject PauseMenuUI;
+    [Header("Minimap")]
+    [SerializeField] private GameObject Minimap;
     [Header("Score")]
     [SerializeField] private float totalTime = 180f;
     [SerializeField] private Text textTime;
@@ -58,6 +60,7 @@ public class UIController : MonoBehaviour
     {
         GameController.instant.isPause = false;
         PlayUI.SetActive(true);
+        Minimap.SetActive(true);
         PauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPause = false;
@@ -66,6 +69,7 @@ public class UIController : MonoBehaviour
     {
         GameController.instant.isPause = true;
         PlayUI.SetActive(false);
+        Minimap.SetActive(false);
         PauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPause = true;
@@ -74,6 +78,7 @@ public class UIController : MonoBehaviour
     {
         //Debug.Log("GameOver");
         PlayUI.SetActive(false);
+        Minimap.SetActive(false);
         GameOverUI.SetActive(true);
 
     }
@@ -81,6 +86,7 @@ public class UIController : MonoBehaviour
     {
         //Debug.Log("Winner");
         PlayUI.SetActive(false);
+        Minimap.SetActive(false);
         WinnerUI.SetActive(true);
         textTimeWin.text = "Time: " + score.ToString();
     }

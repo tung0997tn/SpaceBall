@@ -65,9 +65,13 @@
     <Compile Include="Assets\Controller\ColiderController.cs" />
     <Compile Include="Assets\Controller\GameController.cs" />
     <Compile Include="Assets\Controller\MenuController.cs" />
+    <Compile Include="Assets\Controller\MinimapScript.cs" />
     <Compile Include="Assets\Controller\UIController.cs" />
     <Compile Include="Assets\GalaxyBox2\Scripts\examplescene.cs" />
     <Compile Include="Assets\GalaxyBox2\Scripts\MouseLook.cs" />
+    <Compile Include="Assets\Player.cs" />
+    <Compile Include="Assets\PlayerData.cs" />
+    <Compile Include="Assets\SaveSystem.cs" />
     <None Include="Assets\GalaxyBox2\instructions.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Asus/Documents/Baitap01/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
